@@ -1,0 +1,11 @@
+.platillo-menu{
+    max-height: 540px;
+    overflow: hidden;
+}
+
+
+.img-platillo{
+    height: 80px;
+    width: 80px;
+    float: left;
+}
