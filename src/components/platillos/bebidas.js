@@ -7,14 +7,14 @@ import VarTiendaController from '../../controllers/tienda';
 import Ordenar from '../ordenar/ordenar';
 
 
-class Platillos extends Component {
+class Bebidas extends Component {
 
 
     render(){
-        let platillos_div = [];
+        let bebidas_div = [];
 
-        const add_platillos = VarTiendaController.platillos.forEach( ( _val, _index ) =>
-            platillos_div.push(
+        const add_bebidas = VarTiendaController.bebidas.forEach( ( _val, _index ) =>
+            bebidas_div.push(
                 <div className="list-group-item" key={_index}>
                     <div className="panel-body">
                         <img role="presentation" src={logo} className="img-platillo" alt={_val.name}/>
@@ -23,7 +23,7 @@ class Platillos extends Component {
                         <div className="">
                             <Ordenar price={_val.price}
                                 indice={_index}
-                                order={( index, evt )=>{ VarTiendaController.putInOrder(  index, evt, 'platillos' )}}/>
+                                order={( index, evt )=>{ VarTiendaController.putInOrder(  index, evt, 'bebidas' )}}/>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ class Platillos extends Component {
             <div className="container col-xs-6">
                 <div className="panel panel-primary">
                     <div className="list-group platillo-menu">
-                        {platillos_div}
+                        {bebidas_div}
                     </div>
                 </div>
             </div>
@@ -44,4 +44,4 @@ class Platillos extends Component {
 }
 
 
-export default Platillos;
+export default Bebidas;
